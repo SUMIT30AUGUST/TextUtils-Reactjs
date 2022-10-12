@@ -1,0 +1,3 @@
+.accordion-after::after{
+    filter: invert(1);
+}

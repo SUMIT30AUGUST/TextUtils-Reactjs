@@ -1,4 +1,4 @@
-//import logo from './logo.svg';
+
 import React ,{ useState} from 'react';
 import './App.css';
 import Alert from './components/Alert';
@@ -9,6 +9,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+
 } from "react-router-dom";
 
 
@@ -51,8 +52,9 @@ function App() {
       <Alert alert={alert}/>
       <div className="container my-3" >
         <Routes>
-          <Route exact path="/about" element={<About />}/>
-          <Route exact path="/" element={<TextForm  showAlert={showAlert} mode={mode} heading="Enter the text to analyze below"/>}/>
+          <Route exact path="/about" element={<About mode={mode}/> }/>
+          <Route exact path="/" element={<TextForm  showAlert={showAlert} mode={mode} 
+             heading=" Text Utils- Word counter , Character counter "/>}/>
         {/* exact helps in exact matching of paths bcoz react do partia; matching */}
         </Routes>
       </div>
